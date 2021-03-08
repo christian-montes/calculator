@@ -1,18 +1,35 @@
 @import "~bootstrap/scss/bootstrap";
 
 
-div {
+@for $x from 0 through 5 {
+    .row-#{$x} {height: 85px;}
+}
+
+div.container {
+    margin-top: 20px;
+}
+
+div.card {
+    // cornflower blue background
+    background-color: #6495ed;
 
     & span {
-        font-size: large;
+        font-size: 2rem;
+        color: white;
+
+        &.display {
+            font-size: 3.5rem;
+            background-color: grey;
+            display: block;
+        }
     }
 
-    &.total {
-        font-size: 3rem;
-    }
 
     & button {
-        font-size: 1.5rem;
-        height: 65px;
+        font-size: 1.75em;
+
+        & span {
+            font-size: 1.5rem;
+        }
     }
 }
